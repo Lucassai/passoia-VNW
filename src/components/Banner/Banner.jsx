@@ -1,9 +1,10 @@
 import BannerImg from '../../assets/banner.jpg'
+import './Banner.css'
 
 function Banner() {
   return (
     <>
-      <img src={BannerImg} alt="" />
+      <img className="image-banner" src={BannerImg} alt="" />
     </>
   )
 }
