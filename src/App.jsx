@@ -1,11 +1,12 @@
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Banner from './components/Banner/Banner'
 
 function App() {
   return (
     <>
       <Header />
-      <h1>Passoia</h1>
+      <Banner />
       <Footer />
     </>
   )

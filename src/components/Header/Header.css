@@ -1,11 +1,15 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #f8f9fa;
   padding: 20px;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
 }
 
 header ul {
@@ -17,4 +21,82 @@ header ul {
 
 header ul li {
   margin: 0 15px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 4px 0;
+  display: inline-block;
+}
+
+/* pseudo-elemento que faz o sublinhado animado */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* ajuste conforme o espaçamento desejado */
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+/* ao passar o mouse ou focar, expande o sublinhado */
+nav a:hover::after,
+nav a:focus::after {
+  transform: scaleX(1);
+}
+
+/* Variante: começar do centro
+nav a::after { transform-origin: center; }
+*/
+.hamburguer-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* oculto por padrão */
+}
+
+@media (max-width: 768px) {
+  .hamburguer-button {
+    display: block; /* mostrar o botão em telas pequenas */
+  }
+  .hamburguer-button img {
+    width: 50px;
+    height: 50px;
+  }
+  nav ul {
+    display: none; /* ocultar o menu por padrão em telas pequenas */
+    flex-direction: column;
+    gap: 16px;
+    background-color: #f8f9fa;
+    position: absolute;
+    top: 60px; /* ajuste conforme a altura do header */
+    right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .active {
+    display: flex; /* mostrar o menu quando ativo */
+  }
 }/*# sourceMappingURL=Header.css.map */
