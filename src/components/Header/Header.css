@@ -77,6 +77,9 @@ nav a::after { transform-origin: center; }
 }
 
 @media (max-width: 768px) {
+  header {
+    margin: 0 auto;
+  }
   .hamburguer-button {
     display: block; /* mostrar o botão em telas pequenas */
   }
