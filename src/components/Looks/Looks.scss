@@ -43,13 +43,13 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   #images ul {
     grid-template-columns: 50% 50%;
-    gap: 50px 10px; /* menos espaçamento em telas menores */
+    gap: 50px 10px;
   }
   #images li {
-    padding: 0; /* corrige '0 px' */
+    padding: 0;
   }
   #looks {
     padding: 20px;
