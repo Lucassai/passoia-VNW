@@ -1,5 +1,8 @@
 #lancamentos {
+  width: 100%;
   margin-top: 40px;
+  padding: 20px 40px;
+  box-sizing: border-box;
 }
 
 #lancamentos h2 {
@@ -10,9 +13,15 @@
 }
 
 #lancamentos-content {
-  display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10%;
+  display: flex;
   gap: 20px;
+}
+
+#img-batons img {
+  width: 80%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
 }
 
 #kits {
@@ -32,7 +41,106 @@
 
 .batom {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  width: 80%;
 }
 .ativo {
   display: block;
+}
+
+.batom img {
+  width: 120px;
+}
+
+.batom h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.batom span {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.batom button {
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.batom button:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+
+.batom .blue {
+  background-color: #b1b0d8;
+  color: #b1b0d8;
+}
+.batom .red {
+  background-color: #e1342a;
+  color: #e1342a;
+}
+
+.batom .brown {
+  background-color: #e1342a;
+  color: #e1342a;
+}
+
+.batom .pink {
+  background-color: #de755e;
+  color: #de755e;
+}
+
+.batom h4 {
+  margin: 30px 0;
+  font-size: 20px;
+}
+.batom p {
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  #lancamentos {
+    box-sizing: border-box;
+
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  #lancamentos-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #kits {
+    display: none;
+  }
+
+  #imagem-batom {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .batom {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .batom img {
+    width: 100px;
+  }
+
+  .batom button {
+    width: 60px;
+    height: 60px;
+  }
 }

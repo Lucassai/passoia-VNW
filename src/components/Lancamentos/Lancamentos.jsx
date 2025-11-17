@@ -13,7 +13,7 @@ import Browm from './images/brown.png'
 import Pink from './images/pink.png'
 
 function Lancamentos() {
-  const [cor, setCor] = useState(Red)
+  const [cor, setCor] = useState(Blue)
 
   return (
     <div id="lancamentos">
@@ -24,16 +24,24 @@ function Lancamentos() {
           <img src={Kit2} alt="" />
           <img src={Kit3} alt="" />
         </div>
-        <img src={cor} alt="" />
+        <img id="imagem-batom" src={cor} alt="" />
         <div className="batom ativo">
           <img src={Estrelas} alt="" />
           <h3>Matte Premium</h3>
           <span>Cores disponiveis</span>
           <div id="cores">
-            <button>Blue</button>
-            <button>Red</button>
-            <button>Brown</button>
-            <button>Pink</button>
+            <button onClick={() => setCor(Blue)} className="blue">
+              Blue
+            </button>
+            <button onClick={() => setCor(Red)} className="red">
+              Red
+            </button>
+            <button onClick={() => setCor(Browm)} className="brown">
+              Brown
+            </button>
+            <button onClick={() => setCor(Pink)} className="pink">
+              Pink
+            </button>
           </div>
           <h4>Descrição</h4>
           <p>
