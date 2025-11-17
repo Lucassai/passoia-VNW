@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
-
+import './Header.scss'
 import Logo from '../../assets/LogoHeader.svg'
 import BurguerMenu from '../../assets/BurguerMenu.svg'
-import './Header.css'
+
+import { useEffect } from 'react'
 
 function Header() {
   useEffect(() => {
@@ -32,7 +32,9 @@ function Header() {
 
   return (
     <header>
-      <img src={Logo} alt="" />
+      <a href="#">
+        <img src={Logo} alt="" />
+      </a>
       <nav>
         <button id="hamburguer-button" className="hamburguer-button">
           <img src={BurguerMenu} alt="" />

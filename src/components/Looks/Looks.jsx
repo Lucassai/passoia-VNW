@@ -2,7 +2,7 @@ import Labios from '../../assets/Labios.png'
 import Olhos from '../../assets/Olhos.jpg'
 import Rosto from '../../assets/Rosto.png'
 import Tendencia from '../../assets/Tendencia.png'
-import './Looks.css'
+import './Looks.scss'
 
 function Looks() {
   return (
