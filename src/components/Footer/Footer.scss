@@ -1,0 +1,38 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px;
+  box-shadow: 0 -2px 10px gray;
+}
+footer h3 {
+  font-size: 24px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+footer #atendimento ul li {
+  margin-bottom: 10px;
+}
+
+#pagamento .formas-pagamento {
+  margin-right: 10px;
+  display: flex;
+  align-self: start;
+  align-items: center;
+}
+
+.formas-pagamento img {
+  margin-right: 10px;
+  width: 50px;
+}
+#sociais img {
+  margin-right: 10px;
+}
+
+@media (max-width: 820px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
