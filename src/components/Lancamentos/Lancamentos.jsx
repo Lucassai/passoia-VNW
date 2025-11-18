@@ -13,6 +13,11 @@ import Browm from './images/brown.png'
 import Pink from './images/pink.png'
 
 function Lancamentos() {
+  const MudarRed = () => {
+    setCor(Red)
+    setTexto('Red')
+  }
+  const [texto, setTexto] = useState('Blue')
   const [cor, setCor] = useState(Blue)
 
   return (
@@ -132,6 +137,8 @@ function Lancamentos() {
         </div>
       </div>
     </div>
+
+    //TODO fazer um hook que altere o texto junto com a cor
   )
 }
 export default Lancamentos
